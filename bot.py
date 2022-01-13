@@ -81,7 +81,7 @@ def merge(message):
         arq.write('\n'.join(inputs))
 
     subprocess.call(
-        ['ffmpeg', '-i', '"'{}'".format(i)', '-vf', 'minterpolate=mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=60', '-b:v', '4000k', '-c:a', 'copy', 'out.mp4']
+        ['ffmpeg', '-i', '"'{}'".', '-vf', 'minterpolate=mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=60', '-b:v', '4000k', '-c:a', 'copy', 'out.mp4']
     )
 
     with open('out.mp4', 'rb') as video:
